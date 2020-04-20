@@ -1,6 +1,6 @@
 sudo: required
-service:
-  -docker
+services:
+  - docker
 
 before_install:
   - docker build -t pushpakr/docker-react -f Dockerfile.dev .
