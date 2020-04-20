@@ -5,6 +5,6 @@ services:
 before_install:
   - docker build -t pushpakr/docker-react -f Dockerfile.dev .
 
-scripts:
-  - docker run pushpakr/docker-react npm run test -- --coverage
+script:
+  - docker run -e CI=true pushpakr/docker-react npm run test
 
